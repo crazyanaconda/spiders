@@ -21,11 +21,19 @@ MYSQL_PASSWD = ''
 
 
 
-BASE_DIR = 'E:\\img\\tiyu\\'
+# BASE_DIR = 'E:\\img\\tiyu\\'
+# SPIDER_NAME = 'tiyu'
+# ALLOWED_DOMAINS = ['sports.people.com.cn']
+# START_URLS = ['http://sports.people.com.cn/']
+# BASE_URL = 'http://sports.people.com.cn'
 
-SPIDER_NAME = 'tiyu'
-ALLOWED_DOMAINS = ['sports.people.com.cn']
-START_URLS = ['http://sports.people.com.cn/']
+
+BASE_DIR = 'E:\\img\\shehui\\'
+SPIDER_NAME = 'shehui'
+ALLOWED_DOMAINS = ['society.people.com.cn']
+START_URLS = ['http://society.people.com.cn/']
+BASE_URL = 'http://society.people.com.cn/'
+
 
 # Crawl responsibly by identifying yourself (and your website) on the user-agent
 #USER_AGENT = 'renminwang (+http://www.yourdomain.com)'

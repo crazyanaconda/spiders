@@ -11,13 +11,12 @@ import requests
 import pymysql
 
 from renminwang import settings
-from renminwang.settings import BASE_DIR
+from renminwang.settings import BASE_DIR,BASE_URL
 # 下载插图
 class DownLoadInsetPipeline(object):
     def process_item(self, item, spider):
         inset_list = item['inset'].split('+++')
         if inset_list[0] != '':
-            base_ulr = 'http://sports.people.com.cn'
             for inset_url in inset_list:
                 if inset_url.startswith('http://'):
                     # 图片的链接是完整的
@@ -28,7 +27,7 @@ class DownLoadInsetPipeline(object):
                         os.makedirs(dir_path)
                     self.down_img(dir_path,inset_url)
                 else:
-                    img_url = base_ulr + inset_url
+                    img_url = BASE_URL + inset_url
                     html_name = (item['url'].split('/')[-1]).split('-')
                     if len(html_name) == 2:
                         dir_name = ''.join(html_name).replace('.html','')
